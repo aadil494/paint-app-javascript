@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Drawing App</title>
+        <link rel="stylesheet" href="style.css" />
+        <!-- <link rel="stylesheet" href="./fontawesome/css/all.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="options">
+            <div class="parameters">
+                <div class="d-flex">
+                    <label for="size">Size</label>
+                    <input type="number" name="size" id="size" value="5"> 
+                </div>
+                <div class="d-flex">
+                    <label for="radius">Radius</label>
+                    <input type="number" name="radius" id="radius" value="5" style="align-self:flex-end;">
+                </div>
+            </div>  
+        </div>
+        <div class="toolbox">
+            <div class="tool-item selected_item" id="pen"><i class="fa fa-pen"></i></div>
+            <div class="tool-item" id="eraser"><i class="fa fa-eraser"></i></div>
+            <div class="tool-item"><i class="fa fa-mouse-pointer"></i></div>
+            <div class="tool-item" id="add_image"><i class="far fa-image"></i></div>
+        </div>
+        <canvas id="canvas" width="1000" height="600"></canvas>
+
+        <div class="modal-container" id = "modal">
+            <div class="modal">
+                <div class="modal-header">
+                    <h1>Select a picture</h1>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Click on the "browse files" button to select a file from your drive.<br>
+                        Then add the cordinates on where you want to add the photo on canvas.
+                    </p>
+                    <div>
+                    <form>
+                        <input type="file" name="image" id="image">
+                    </form>
+                    <div class="modal-inputs">
+                        <label for="imagex">X</label>
+                        <input type="text" id="imagex">
+                        <label for="imagey">Y</label>
+                        <input type="text" id="imagey">
+                    </div>
+                    <div class="modal-footer" >
+                        <button class="modal_submit" id = "modal_submit">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
